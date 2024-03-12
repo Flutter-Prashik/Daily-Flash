@@ -26,19 +26,22 @@ class Day4Container3 extends StatelessWidget {
         ],
         leading: const Icon(Icons.person),
       ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text('Prashik'),
-          const SizedBox(
-            width: 100,
+      floatingActionButton: Align(
+        alignment: Alignment.bottomCenter,
+        child: FloatingActionButton.extended(
+          isExtended: true,
+          onPressed: () {},
+          label: const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Prashik'),
+              SizedBox(
+                width: 10,
+              ),
+              Icon(Icons.add),
+            ],
           ),
-          FloatingActionButton(
-            onPressed: () {},
-            backgroundColor: Colors.grey,
-            child: const Icon(Icons.add),
-          ),
-        ],
+        ),
       ),
     );
   }
